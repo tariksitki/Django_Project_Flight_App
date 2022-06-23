@@ -44,6 +44,13 @@ INSTALLED_APPS = [
     ## third party apps:
     'rest_framework',
     "drf_yasg",
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    
+
+
+    ## myapps
+    'users',
     
 
     
@@ -176,4 +183,14 @@ LOGGING = {
             # will not be handled by the django logger.
         },
     },
+}
+
+
+
+### register icin
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
 }
